@@ -2,6 +2,8 @@ package com.example.pryappsmisproductos.Modelo
 
 import com.example.pryappsmisproductos.InterfaceApi.ApiService
 import kotlinx.serialization.json.Json
+import kotlin.lazy
+import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
 import retrofit2.converter.kotlinx.serialization.asConverterFactory
 
@@ -14,13 +16,12 @@ object RetrofitCliente {
         isLenient = true
     }
 
-    val apiService = ApiService by lazy{
-        val contenType = "application/json".toMediaType
+    val apiService: ApiService by lazy{
+        val contenType = "application/json".toMediaType()
         Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(jsonConfig.asConverterFactory(contenType))
             .build()
             .create(ApiService::class.java)
     }
-
 }
