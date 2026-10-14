@@ -2,11 +2,12 @@ package com.example.pryappsmisproductos.Presentador
 
 import com.example.pryappsmisproductos.Modelo.clsCategoriasModelo
 import com.example.pryappsmisproductos.Modelo.dataCategorias
+import com.example.pryappsmisproductos.Vista.MainActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class clsCategoriasPresentador {
+class clsCategoriasPresentador(val vista: MainActivity){
     private val modelo = clsCategoriasModelo()
     private var listaCategorias: List<dataCategorias> = emptyList()
 
