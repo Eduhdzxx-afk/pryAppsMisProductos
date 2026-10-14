@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-
 class MainActivity : AppCompatActivity() {
     private lateinit var presenter: clsCategoriasPresentador
     private lateinit var spinnerCategorias: Spinner
