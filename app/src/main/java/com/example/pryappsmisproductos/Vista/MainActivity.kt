@@ -42,36 +42,56 @@ class MainActivity : AppCompatActivity() {
         configurarListeners()
         presenter.iniciar()
     }
+
     private fun configurarListeners() {
         spinnerCategorias.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                    presenter.seleccionarCategoria(position)
-                }
-                override fun onNothingSelected(parent: AdapterView<*>?) {}
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                presenter.seleccionarCategoria(position)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
     }
+
     fun mostrarCategorias(categorias: List<dataCategorias>) {
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, categorias)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerCategorias.adapter = adapter
     }
+
     fun mostrarProductos(productos: List<dataProductos>) {
         adapterProductos.actualizarLista(productos)
     }
+
     fun seleccionarProducto(producto: dataProductos) {
         presenter.seleccionarProducto(producto)
     }
+
     fun abrirDetalleProducto(id: Int, nombre: String, descripcion: String, precio: Double) {
         val intent = Intent(this, DetalleProductoActivity::class.java)
         intent.putExtra("PRODUCTO_ID", id)
         intent.putExtra("NOMBRE_PRODUCTO", nombre)
-        intent.putExtra("DESCRIPCION_PRODUCTO", descripcion) // <-- El nombre debe ser EXACTAMENTE "DESCRIPCION_PRODUCTO"
+        intent.putExtra(
+            "DESCRIPCION_PRODUCTO",
+            descripcion
+        ) // <-- El nombre debe ser EXACTAMENTE "DESCRIPCION_PRODUCTO"
         intent.putExtra("PRECIO_PRODUCTO", precio)
         startActivity(intent)
     }
+
     fun mostrarMensajeExito(id: Int, nombre: String) {
-        Toast.makeText(this, "ID:" + id.toString() + "- Seleccionaste:" + nombre, Toast.LENGTH_SHORT).show()
+        Toast.makeText(
+            this,
+            "ID:" + id.toString() + "- Seleccionaste:" + nombre,
+            Toast.LENGTH_SHORT
+        ).show()
     }
+
     fun mostrarError(mensaje: String) {
         Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
     }
