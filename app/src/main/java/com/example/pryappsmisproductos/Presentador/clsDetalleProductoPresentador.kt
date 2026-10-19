@@ -1,6 +1,7 @@
 package com.example.pryappsmisproductos.Presentador
 
 import com.example.pryappsmisproductos.Modelo.clsProductosModelo
+import com.example.pryappsmisproductos.Modelo.dataImagenesProducto
 import com.example.pryappsmisproductos.Vista.DetalleProductoActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -14,7 +15,7 @@ class clsDetalleProductoPresentador(private val vista: DetalleProductoActivity) 
             try {
                 //Aqui se consume obtenerDetalleProducto del modelo
                 val listaImagenes: List<dataImagenesProducto> = modelo.obtenerDetalleProducto(productoId)
-                vista.mostrarImagenes(listaImagenes)
+                vista.mostrarimagenes(listaImagenes)
             }catch(e: Exception ){
                 vista.mostrarError("Error al cargar detalle: " + e.localizedMessage)
             }

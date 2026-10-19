@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.pryappsmisproductos.Modelo.dataImagenesProducto
 import com.example.pryappsmisproductos.R
-import com.example.pryappsmisproductos.modelo.dataImagenesProducto
 
 class GaleriaAdaptador(private var listaImagenes: List<dataImagenesProducto>): RecyclerView.Adapter<GaleriaAdaptador.GaleriaViewHolder>() {
 

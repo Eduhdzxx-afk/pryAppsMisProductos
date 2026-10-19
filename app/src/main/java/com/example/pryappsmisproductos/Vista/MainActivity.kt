@@ -11,7 +11,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.pryappsmisproductos.Adaptador.ProductosAdaptador
 import com.example.pryappsmisproductos.Modelo.dataCategorias
+import com.example.pryappsmisproductos.Modelo.dataProductos
 import com.example.pryappsmisproductos.Presentador.clsCategoriasPresentador
 import com.example.pryappsmisproductos.R
 
