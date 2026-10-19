@@ -5,9 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.R
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.pryappsmisproductos.R
 import com.example.pryappsmisproductos.Modelo.dataProductos
 import com.example.pryappsmisproductos.Vista.MainActivity
 
@@ -38,7 +38,7 @@ import com.example.pryappsmisproductos.Vista.MainActivity
                 .error(android.R.drawable.stat_notify_error) // Imagen si falla la carga
                 .into(holder.imgProducto)
 
-            holder.itemView.setOnClickListener(object : View.OnClickListener {
+            holder.itemView.setOnClickListener(object: View.OnClickListener {
                 override fun onClick(v: View?) {
                     //Esta funcion se ejecuta en la vista MainActivity
                     // y se manda al presentador para que se muestre el prod seleccionado
