@@ -8,5 +8,6 @@
     <string name="txtdetalleProducto">Producto </string>
     <string name="txtdetalleDescripcion">Descripcion </string>
     <string name="txtdetalleDescripcionMas">Descripcion detallada </string>
+    <string name="title_activity_login">LoginActivity</string>
 
 </resources>

@@ -28,6 +28,12 @@
             android:name=".Vista.DetalleProductoActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Vista.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.PryAppsMisProductos"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
