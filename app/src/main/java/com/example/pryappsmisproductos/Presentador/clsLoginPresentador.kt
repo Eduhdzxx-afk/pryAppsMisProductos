@@ -6,6 +6,7 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.withContext
 import com.example.pryappsmisproductos.Vista.LoginActivity
 import kotlinx.coroutines.launch
+import com.example.pryappsmisproductos.Modelo.clsLoginModelo
 
 class clsLoginPresentador(private val view: LoginActivity) {
     private val modelo = clsLoginModelo();
