@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.pryappsmisproductos.Modelo.dataImagenesProducto
 import com.example.pryappsmisproductos.R
-import com.example.pryappsmisproductos.modelo.dataImagenesProducto
 
 class GaleriaAdaptador(private var listaImagenes: List<dataImagenesProducto>): RecyclerView.Adapter<GaleriaAdaptador.GaleriaViewHolder>() {
 
@@ -28,7 +28,7 @@ class GaleriaAdaptador(private var listaImagenes: List<dataImagenesProducto>): R
 
     override fun onBindViewHolder(holder: GaleriaViewHolder, position: Int) {
         val imagen = listaImagenes[position]
-        val baseUrl = "http://192.168.1.69/tienda_api/"
+        val baseUrl = "http://192.168.137.142/tienda_api/"
         val urlCompleta = baseUrl + imagen.urlImagen
 
         Glide.with(holder.itemView.context)
